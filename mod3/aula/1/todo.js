@@ -1,1 +1,1 @@
- alert("Está funcionando");
+alert("está funcionando");
