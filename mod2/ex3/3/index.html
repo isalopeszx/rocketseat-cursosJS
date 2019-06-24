@@ -5,15 +5,25 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Ex 2/mod 2</title>
+    <title>Ex 3/mod 2</title>
 </head>
 
 <body>
 
-    <script>
+    <ul>-Diego</ul>
+    <ul>-Gabriel</ul>
+    <ul>-Lucas</ul>
 
-      
+    <script>
+        var nomes = ["Diego", "Gabriel", "Lucas"];
+        var listaElement = document.querySelector('ul');
+        for (nome of nomes) {
+            var listaElement = document.createElement('lista');
+            var textElement = document.createTextNode(nome);
+            listaElement.appendChild(listaElement);
+        }
     </script>
+
 </body>
 
 </html>
