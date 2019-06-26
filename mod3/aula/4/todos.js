@@ -26,10 +26,10 @@ function renderTodos() {
 renderTodos();
 
 function addTodo (){
-var todoText = inputElement.Value;
+var todoText = inputElement.value;
 
 todos.push(todoText);
-inputElement,value = "";
+inputElement.value = "";
 renderTodos();
 
 }
