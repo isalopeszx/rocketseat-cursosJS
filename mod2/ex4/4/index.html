@@ -11,22 +11,18 @@
 <body>
 
     <div id="app">
-        <input type="text" name="nome">
-        <button class="adicionar()">Adicionar</button>
+        <input type="text" name="nome" />
+        <button class="botao">Adicionar</button>
     </div>
-
-
-    <ul>-Diego</ul>
-    <ul>-Gabriel</ul>
-    <ul>-Lucas</ul>
-
+    <ul>Diego</ul>
+    <ul>Gabriel</ul>
     <script>
         var inputElement = document.querySelector('input[name=nome]');
         var btnElement = document.querySelector('button.botao');
 
         btnElement.onClick = function () {
             var text = inputElement.value;
-            document.write(text)
+            alert(text);
         }
 
 
