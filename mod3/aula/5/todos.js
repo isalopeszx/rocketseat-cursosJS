@@ -4,7 +4,7 @@ var inputElement = document.querySelector("#app input");
 var buttonElement = document.querySelector("#app button")
 
 var todos = [
-    'fazer café',
+    'fazer café', 
     'beber água',
     'reciclar'
 
@@ -17,7 +17,19 @@ function renderTodos() {
         var todoElement = document.createElement('li');
         var todoText = document.createTextNode(todo);
 
+        var linkElement = document.createElement('a');
+        linkElement.setAttribute('href' , 'a');
+
+        var pos = todos.indexOf(todo);
+        linkElement.setAttribute('onclick', 'deleteTodo(' + pos + ')');
+
+        var linkText = document.createTextNode(' Excluir');
+
+        linkElement.appendChild(linkText);
+
         todoElement.appendChild(todoText);
+        todoElement.appendChild(linkElement);
+
         listElement.appendChild(todoElement);
     }
 
@@ -25,13 +37,18 @@ function renderTodos() {
 
 renderTodos();
 
-function addTodo (){
-var todoText = inputElement.value;
+function addTodo() {
+    var todoText = inputElement.value;
 
-todos.push(todoText);
-inputElement.value = "";
-renderTodos();
+    todos.push(todoText);
+    inputElement.value = "";
+    renderTodos();
 
 }
 
 buttonElement.onclick = addTodo;
+
+function deleteTodo(pos){
+    todos.splice(pos, 1);
+    renderTodos();
+}
